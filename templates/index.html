@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Test JSON POST</h2>
+<button onclick="sendData()">Send JSON</button>
+
+<script>
+function sendData() {
+  fetch("https://a9ba537b01e1.ngrok-free.app/check_car", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+ "car_number": "GJzero 1ABone two34",
+ "From": "+911234567890"
+})
+  })
+  .then(res => res.json())
+  .then(data => alert(JSON.stringify(data)))
+  .catch(err => console.error(err));
+}
+</script>
+</body>
+</html>
