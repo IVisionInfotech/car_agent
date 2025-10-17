@@ -66,7 +66,7 @@ def check_car():
             msg = f"Yes, your car with registration number {res['car_num']} has been towed by us. You can come and collect it between 10 a.m. to 5 p.m. tomorrow."
             return jsonify({"message": msg, "found": True})
         else:
-            msg=f"We’re sorry, but your car number {res['car_num']} could not be found in our records."
+            msg=f"We’re sorry, but your car number could not be found in our records."
             return jsonify({"message":msg,"found": False})
 
     except Exception as e:
